@@ -48,29 +48,6 @@ img {
     padding: 96px 0;
 }
 
-/*@media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 1158px) {
-    .container {
-        max-width: 1158px;
-        padding: 0 15px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .section {
-        padding: 120px 0;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}*/
-
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -94,6 +71,28 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .section {
+        padding: 120px 0;
+        margin-top: 0;
+        margin-bottom: 0;}
+    }
 /*-------------------------*/
 
 
@@ -104,7 +103,7 @@ img {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     background: #fff;
-   padding: 16px;
+   
 } 
 
 .header-wrap {
@@ -227,6 +226,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    padding: 72px 16px 40px;
    display: flex;
     flex-direction: column;
+    justify-content: space-between;
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
@@ -275,6 +275,10 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     justify-content: flex-start;
     gap: 40px;
     flex-grow: 1;
+}
+
+.header-mobile-nav {
+    margin-bottom: auto;
 }
 
 .header-mob-nav-link {
@@ -328,7 +332,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: 0;
 }
 
-/*.mobile-soc-item {
+.mobile-soc-item {
     position: relative;
     width: 40px;
     height: 40px;
@@ -342,15 +346,13 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     left: 50%;
     transform: translate(-50%, -50%);
     fill: #f4f4fd;
-}*/
+}
 
 @media screen and (min-width: 768px) {
     .header {
-        padding-bottom: 0;
+        padding: 0;
         }
-   .container {
-       min-width: 768px;
-   }
+
     .header-open-btn {
         display: none;
     }
@@ -359,38 +361,13 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         margin: 0 auto;
         width: 50%;
     }
-    /*.header-menu-link {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-        display: block;
-        padding: 24px 0;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .current {
-        position: relative;
-        color: #404bbf;
-        }
-    
-    .header-menu-link.current::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -1px;
-        display: block;
-        width: 100%;
-        border-radius: 2px;
-        height: 4px;
-        background-color: #404bbf;
-        }*/
     
     .header-address {
         display: flex;
         }
     .adress-list {
+        display: flex;
+        flex-direction: column;
         gap: 12px;
         }
     .address-link {
@@ -402,6 +379,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 1158px) {
+
     .container {
         width: 1158px;
         padding: 0 15px;
@@ -445,9 +423,8 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .address-list {
         display: flex;
-        list-style: none;
-            padding: 0;
-            margin: 0;
+        gap: 40px;
+        
     }
 
     .address-link {
@@ -521,7 +498,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 56px;
     padding: 16px 32px;
     margin: 0 auto;
-    margin-top: 72px;
+    margin-top: 36px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -560,6 +537,10 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 1158px) {
+    .section {
+        min-width: 1158px;
+        padding: 120px 0;
+    }
     .hero-section {
             padding-top: 188px;
             padding-bottom: 188px;
@@ -578,6 +559,9 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
                     url(../images/hero-bg.jpg)
             }
         }
+    .hero-button {
+        margin-top: 48px;
+    }
     .hero-button:hover,
     .hero-button:focus {
             background: #404bbf;
@@ -712,6 +696,9 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*=========our team==========*/
 
+.section-team {
+    background-color: #f4f4fd;;
+}
 
 .seaction-team-list {
     display: flex;
@@ -850,10 +837,6 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 
 /*=============portfolio=============*/
 
-.section-portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
 
 .section-portfolio-list {
     /*background: #fff;
@@ -1104,7 +1087,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .footer-form-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     background-color: transparent;
     font-size: 12px;
@@ -1165,7 +1148,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 @media screen and (min-width: 768px) {
 .footer-wrap {
-    width: 584px;
+    min-width: 584px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1202,7 +1185,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-bottom: 100px;
     }
 .footer-wrap {
-    width: 1158px;
+    min-width: 1158px;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
@@ -1446,6 +1429,9 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .policy-link {
@@ -1468,9 +1454,10 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: transparent;
     background-color: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
 }
 
-.modal-form-checkbox:checked + .checkbox-label span {
+.modal-form-checkbox:checked + .checkbox-label .checkbox-span {
     border-radius: 2px;
     background-color: #404bbf;
     border: 1px solid #404bbf;
